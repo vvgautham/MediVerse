@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MEDIVERSE</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">MEDIVERSE</a>
+        <ul>
+            <li><a href="website.html" target="_blank" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="index1.html" target="_blank">Sign Up</a></li>
+            <li><a href="index1.html" target="_blank">LogIn</a></li>
+            <li><a href="about-us.html">About Us</a></li> 
+        </ul>
+    </header>
+    <section>
+        <img src="images/monutain_01.png" id="stars">
+        <img src="images/monutain_02.png" id="moon">
+        <img src="images/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">MediVerse</h2>
+        <img src="images/man.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>ABOUT US</h2>
+        <p>
+            MediVerse is a medical website that aims to provide comprehensive medical information and resources to individuals seeking to learn more about various health conditions and treatments. At MediVerse, users can find a wide range of resources, including articles, videos, and interactive tools that can help them better understand various health conditions and make informed decisions about their health.<br><br>
+            One of the key features of MediVerse is its easy-to-navigate website, which allows users to quickly find the information they need. The site is organized by topic, making it easy to find information on specific health conditions or treatments. The site also offers a search function, which allows users to search for specific keywords or phrases to find the information they need.
+            In addition to providing information, MediVerse also offers interactive tools that can help users assess their health and track their progress. For example, the site offers a symptom checker, which allows users to enter their symptoms and receive information about possible causes and treatments. The site also offers a health tracker, which allows users to track their progress over time and monitor their health status.
+            Finally, MediVerse offers a community forum, where users can connect with others who are dealing with similar health conditions. The forum provides a safe and supportive environment where users can share their experiences, ask questions, and receive support from others who understand what they are going through.
+            <br><br>In summary, MediVerse is a comprehensive medical website that provides a range of resources and tools to help users better understand various health conditions and make informed decisions about their health. From articles and videos to interactive tools and a community forum, MediVerse offers a wealth of information and support to individuals seeking to take control of their health.
+        </p>
+    </div>
+
+    <div class="features" id="features">
+        <h2>Our Features</h2>
+        <div class="feature-box">
+            <h3>Symptom Checker</h3>
+            <p>Enter your symptoms and get information about possible causes and treatments.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="feature-box">
+            <h3>Health Tracker</h3>
+            <p>Track your health progress over time and monitor your health status.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="feature-box">
+            <h3>Articles</h3>
+            <p>Read articles on various health conditions and treatments.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="feature-box">
+            <h3>Community Forum</h3>
+            <p>Connect with others who are dealing with similar health conditions.</p>
+            <a href="#">Join Now</a>
+        </div>
+    </div>
+
+    <div class="contact-us" id="contact-us">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="footer" id="footer">
+        <p>&copy; 2024 MediVerse. All rights reserved.</p>
+    </div>
+
+    <script> 
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 0.2 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        });
+    </script>
+  </body>
+</html>
